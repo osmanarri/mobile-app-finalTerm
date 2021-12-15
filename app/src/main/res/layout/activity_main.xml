@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/main_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stock Infromation"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20pt"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077"
+        />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/insert_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="insertStocksClick"
+                android:text="INSERT STOCKS (HARDCODE)"
+                tools:ignore="MissingConstraints"
+                android:textSize="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/sub_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Stock Symbol:"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20pt"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.077"/>
+
+        <RadioGroup
+            android:id="@+id/stocks_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/GOOGLE_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="GOOGL"
+                android:textSize="17dp"/>
+            />
+
+            <RadioButton
+                android:id="@+id/AMZN_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AMZN"
+                android:textSize="17dp"/>
+
+            <RadioButton
+                android:id="@+id/SSNLF_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SSNLF"
+                android:textSize="17dp"/>
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Display_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="display_click"
+                android:text="Display Stock Info"
+                tools:ignore="MissingConstraints"
+                android:textSize="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtStockName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20pt"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.077"
+            />
+        <TextView
+            android:id="@+id/txtStockQuote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20pt"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.077"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
